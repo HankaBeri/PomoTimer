@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    
+</head>
+<body>
+
+<nav class="navbar custom-navbar px-4 py-2 d-flex justify-content-between align-items-center shadow-sm">
+  <a href="index.html" class="d-flex align-items-center">
+    <img src="daisy.png" alt="Logo" class="logo-img">
+  </a>
+  <ul class="nav-links d-flex list-unstyled m-0">
+    <li class="pixelify-sans-custom ms-4"><a href="#" data-bs-toggle="modal" data-bs-target="#settingsModal">Settings</a></li>
+    <li class="pixelify-sans-custom ms-4"><a href="#">About</a></li>
+  </ul>
+</nav>
+
+<header class="container text-center mt-5 mb-4">
+    <h1 class="pixelify-sans-custom display-3 fw-bold custom-title">Pomodoro Timer</h1>
+</header>
+
+<div id="butterfly"></div>
+
+<div class="container d-flex justify-content-center">
+    <div class="timer-card d-flex flex-column align-items-center justify-content-center p-4 rounded-3 shadow">
+        
+        <div class="timer-display jersey-10-regular text-center my-4">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        
+        <div class="timer-controls d-flex gap-3 mt-auto w-100 justify-content-center">
+            <button id="toggle-btn" class="btn btn-custom jersey-10-regular px-4 py-2 fs-3 shadow-sm">Start</button>
+            <button id="reset-btn" class="btn btn-custom jersey-10-regular px-4 py-2 fs-3 shadow-sm">Reset</button>
+            <button id="next-btn" class="btn btn-custom px-3 py-2 fs-3 shadow-sm" aria-label="Next">
+              <i class="fas fa-forward"></i>
+            </button>
+        </div>
+      </div>
+        
+    </div>
+</div>
+
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-2">
+      
+      <div class="modal-header border-0">
+        <h5 class="modal-title pixelify-sans-custom fs-2 fw-bold" id="settingsModalLabel">Settings</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body">
+        <form id="settings-form">
+          
+          <div class="mb-4">
+            <h6 class="fw-bold mb-3 text-uppercase fs-7 tracking-wide text-muted">Time Intervals</h6>
+            <div class="row g-2">
+              <div class="col-4">
+                <label class="form-label small text-secondary">Pomodoro</label>
+                <input type="number" id="input-pomodoro" class="form-control" value="25" min="1" max="60">
+              </div>
+              <div class="col-4">
+                <label class="form-label small text-secondary">Short Break</label>
+                <input type="number" id="input-short" class="form-control" value="5" min="1" max="30">
+              </div>
+              <div class="col-4">
+                <label class="form-label small text-secondary">Long Break</label>
+                <input type="number" id="input-long" class="form-control" value="15" min="1" max="45">
+              </div>
+            </div>
+          </div>
+          
+          <hr class="text-muted my-4">
+
+          <div class="mb-2">
+            <h6 class="fw-bold mb-3 text-uppercase fs-7 tracking-wide text-muted">Choose Theme</h6>
+            <div class="d-flex gap-2 justify-content-between">
+              
+              <input type="radio" class="btn-check" name="themeOptions" id="theme-light" checked autocomplete="off">
+              <label class="btn btn-outline-secondary w-100 py-2" for="theme-light">
+                <i class="fas fa-sun me-1"></i> Light
+              </label>
+
+              <input type="radio" class="btn-check" name="themeOptions" id="theme-dark" autocomplete="off">
+              <label class="btn btn-outline-secondary w-100 py-2" for="theme-dark">
+                <i class="fas fa-moon me-1"></i> Dark
+              </label>
+
+              <input type="radio" class="btn-check" name="themeOptions" id="theme-pastel" autocomplete="off">
+              <label class="btn btn-outline-secondary w-100 py-2" for="theme-pastel">
+                <i class="fas fa-palette me-1"></i> Daisy
+              </label>
+              
+            </div>
+          </div>
+
+        </form>
+      </div>
+      
+      <div class="modal-footer border-0">
+        <button type="button" id="reset-settings-btn" class="btn btn-secondary px-3" data-bs-dismiss="modal">Reset</button>
+        <button type="button" class="btn btn-secondary px-3" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="save-settings-btn" class="btn btn-success px-4" data-bs-dismiss="modal">Save Changes</button>
+      
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.pixelify-sans-custom {
+    font-family: "Pixelify Sans", sans-serif;
+}
+.jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+}
+
+.custom-navbar {
+    background-color: #2a8143;
+}
+
+.logo-img {
+    max-height: 40px;
+    width: auto;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #468f5b;
+}
+
+.custom-title {
+    color: #1e6532;
+    
+}
+
+.timer-card {
+    background-color: #b8e3c4;
+    width: 400px;    
+    height: 350px;   
+}
+
+.timer-display {
+    font-size: 100px;
+    color: #1e6532;
+    line-height: 2;
+}
+
+.btn-custom {
+    background-color: #72dc90;
+    border: none;
+    color: #1e6532;
+    transition: background-color 0.3s ease;
+}
+.btn-custom:hover {
+    background-color: #68c17a;
+    color: #1e6532; /
+}
+
+#butterfly {
+    position: fixed;
+    width: 60px;   
+    height: 60px;  
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    
+    
+    margin-left: -60px; 
+    margin-top: -60px;
+
+   
+    animation: flapSeparateFrames 0.4s infinite; 
+}
+
+@keyframes flapSeparateFrames {
+    0%, 100% { background-image: url('butterfly1.png'); }
+    50%      { background-image: url('butterfly2.png'); }
+}
