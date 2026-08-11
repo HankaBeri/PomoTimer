@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable; 
+}
+
 body {
     background-image: url('background.jpg');
     background-size: cover;
@@ -8,6 +13,8 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     min-height: 100vh;
+    margin:0;
+
 }
 
 .pixelify-sans-custom {
@@ -19,6 +26,11 @@ body {
 
 .custom-navbar {
     background-color: #2a8143;
+    position: fixed;   
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;     
 }
 
 .logo-img {
@@ -42,6 +54,51 @@ body {
     color: #1e6532;
     
 }
+
+
+a.brand-link, 
+a.brand-link:hover, 
+a.brand-link:focus, 
+a.brand-link:visited {
+    text-decoration: none !important;
+    color: #ffffff !important;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.main-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+
+.about-section {
+    min-height: 100vh;
+    background-color: #ffffff; /* Or try #f4f6f8, #1e1e24 for dark mode, or #e8f5e9 for soft green */
+    color: #333333;           
+    position: relative;
+    z-index: 2; 
+    display: flex;
+    align-items: flex-start;
+    padding-top:60px;
+    padding-bottom:60px;
+    box-sizing: border-box;
+}
+
+.max-w-600{
+    max-width:600px;
+}
+
 
 .timer-card {
     background-color: #b8e3c4;
